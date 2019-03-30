@@ -10,18 +10,12 @@ NAMESERVERS=`cat /etc/resolv.conf | grep ^nameserver | cut -d " " -f 2 | sed 's/
 # Upstream DNS resolvers
 # Non-standard ports may be specified e.g. 127.0.0.1:5353#mydns
 PROVIDERS="
-1.1.1.1#cloudflare 
-4.2.2.1#level3 
-8.8.8.8#google 
-9.9.9.9#quad9 
-80.80.80.80#freenom 
-208.67.222.123#opendns 
-199.85.126.20#norton 
-185.228.168.168#cleanbrowsing 
-77.88.8.7#yandex 
-176.103.130.132#adguard 
-156.154.70.3#neustar 
-8.26.56.26#comodo
+127.4.4.3:5380#doh-client
+127.8.5.3:5853#stubby
+1.1.1.1#cloudflare-a
+1.0.0.1#cloudflare-b
+8.8.8.8#google-a
+8.8.4.4#google-b
 "
 
 # Number of domains to test
